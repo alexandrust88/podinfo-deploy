@@ -17,6 +17,7 @@ spec:
   template:
     metadata:
       annotations:
+        linkerd.io/inject: enabled
         prometheus.io/scrape: "true"
         prometheus.io/port: "9797"
       labels:
