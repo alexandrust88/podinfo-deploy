@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
   namespace: test
+  
 spec:
   minReadySeconds: 3
   revisionHistoryLimit: 5
@@ -19,6 +20,7 @@ spec:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9797"
+        linkerd.io/inject: enabled
       labels:
         app: frontend
     spec:
